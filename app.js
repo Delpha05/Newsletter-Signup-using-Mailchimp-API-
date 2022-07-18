@@ -35,7 +35,7 @@ app.post("/", function(req,res){
 
     const options = {
         method: "POST",
-        auth: "devlin5:c2006d4c8c0afbca5e70c7136edba162-us11"
+        auth: "devlin5:" + process.env.API_KEY
     }
 
     const request = https.request(url, options, function(response){
@@ -62,8 +62,3 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT || 3000, function(){
     console.log("Server is running on port 3000.");
 });
-//API key
-// c2006d4c8c0afbca5e70c7136edba162-us11
-
-//Audience ID
-//cc6bf24632
